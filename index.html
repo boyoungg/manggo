@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mang-o Web Site</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/default.css">
+
+
+    <!-- Bootstrap CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <nav>
+                <div id="logo">MANG-O</div>
+                <ul id="MainMenu">
+                    <li>PLANNING</li>
+                    <li>VIDEO</li>
+                    <li>DESIGN</li>
+                    <li>SERVICE</li>
+                </ul>
+                <div id="team">TEAM</div>
+            </nav>
+        </header>
+    
+        <section id="section01" class="sectionWrap">
+            <div id="secMainText">
+                <h2 id="sectionH2">MANG-O</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, exercitationem laboriosam aut earum est, <br> culpa officia impedit ea esse enim ipsa tempore magnam inventore, dolorum maiores vitae qui libero porro?</p>
+            </div>
+
+            <button class="downBtn">DOWNLOAD</button>
+            <button class="downBtn">APP SERVICE</button>
+        </section>
+    
+        <section id="section02" class="sectionWrap">
+            <h2 class="leftTopName">OVERVIEW</h2>
+            <img src="./img/sec02_title.png" alt="" id="text1" class="scroll scroll-up">
+            <img src="./img/sec02_tex1.png" alt="" id="text2">
+
+            <img src="./img/sec02_ch1.png" alt="" width="750" id="cha1" class="scroll scroll-up">
+            <img src="./img/sec02_ch2.png" alt=""  id="cha2" class="scroll scroll-up">
+            <img src="./img/sec02_ch3.png" alt=""  id="cha3" class="scroll scroll-up">
+            <img src="./img/sec02_ch4.png" alt=""  id="cha4" class="scroll scroll-up">
+        </section>
+    
+        <section id="section03" class="sectionWrap">
+            <img src="./img/sec02_tex2.png" alt="" id="text3" class="scroll scroll-up">
+            <img src="./img/sec02_tex1.png" alt="" id="text4" class="scroll scroll-up">
+            <img src="./img/sec02_tex3.png" alt="" id="text5" class="scroll scroll-up">
+        </section>
+
+        <section id="section04" class="sectionWrap">
+            <h2 class="leftTopName">RESEARCH</h2>
+            <img src="./img/sec4_re.png" alt="" id="grImg" class="scroll scroll-up">
+    
+        </section>
+
+        <section id="section05">
+
+            <div class="frontColor">
+                
+            </div>
+
+            <div class="frontColor">
+                
+            </div>
+
+
+
+        </section>
+    
+    </div>
+    
+    <script>
+        const saTriggerMargin = 300;
+        const saElementList = document.querySelectorAll('.scroll');
+  
+        const saFunc = function() {
+          for (const element of saElementList) {
+            if (!element.classList.contains('show')) {
+              if (window.innerHeight > element.getBoundingClientRect().top + saTriggerMargin) {
+                element.classList.add('show');
+              }
+            }
+          }
+        }
+  
+        window.addEventListener('load', saFunc);
+        window.addEventListener('scroll', saFunc);
+      </script>
+</body>
+</html>
